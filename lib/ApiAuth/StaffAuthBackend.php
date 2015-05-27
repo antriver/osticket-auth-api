@@ -10,9 +10,8 @@ class StaffAuthBackend extends StaffAuthenticationBackend
 {
     use Authenticator;
 
-    static $name = "External API Authentication";
-    static $id = "externalapi";
-
+    public static $name = 'External API Authentication';
+    public static $id = 'externalapi';
     private $config;
 
     public function __construct(Config $config)
@@ -30,13 +29,11 @@ class StaffAuthBackend extends StaffAuthenticationBackend
         $apiResponse = $this->getApiResponse($username, $password);
         error_log(print_r($apiResponse, true));
         if ($apiResponse->success) {
-
             if ($user = new StaffSession($username)) {
                 return $user;
             } else {
                 return new AccessDenied('Your credentials are valid but you do not have a staff account.');
             }
-
         } elseif ($apiResponse->error) {
             return new AccessDenied($apiResponse->error);
         } else {
