@@ -27,7 +27,6 @@ class StaffAuthBackend extends StaffAuthenticationBackend
     public function authenticate($username, $password)
     {
         $apiResponse = $this->getApiResponse($username, $password);
-        error_log(print_r($apiResponse, true));
         if ($apiResponse->success) {
             if ($user = new StaffSession($username)) {
                 return $user;
