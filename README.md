@@ -8,7 +8,7 @@ An backend that allows agents (staff) to login with their credentials for an ext
 git clone https://github.com/antriver/osticket-auth-api.git include/plugins/auth-api
 ```
 * Login to the Admin Panel and install the plugin from the Manage > Plugins > Add New Plugin page.
-* Click on the plugi name in the list and configure the settings.
+* Click on the plugin name in the list and configure the settings.
 * Enable the plugin from the Manage > Plugins page.
 
 ![Plugin settings](http://img.ctrlv.in/img/15/05/27/5565f3e3ce56d.jpg)
