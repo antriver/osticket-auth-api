@@ -1,6 +1,6 @@
 # osTicket External API Authentication
 
-An backend that allows agents (staff) to login with their credentials for an external REST API.
+A backend that allows agents (staff) to login with their credentials for an external REST API.
 
 ## Setup
 * Clone this repository into `include/plugins/auth-api`
