@@ -28,7 +28,7 @@ class StaffAuthBackend extends StaffAuthenticationBackend
     {
         $apiResponse = $this->getApiResponse($username, $password);
         if ($apiResponse->success) {
-            if ($user = new StaffSession($username)) {
+            if ($user = StaffSession::lookup($username)) {
                 return $user;
             } else {
                 return new AccessDenied('Your credentials are valid but you do not have a staff account.');
